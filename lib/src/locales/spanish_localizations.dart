@@ -452,11 +452,25 @@ class SpanishShadcnLocalizations extends ShadcnLocalizations {
   String get colorHue => 'Tono';
 
   @override
-  String get colorSaturation => 'Saturación';
+  String get colorSaturation => 'Sat';
 
   @override
-  String get colorValue => 'Valor';
+  String get colorValue => 'Val';
 
   @override
-  String get colorLightness => 'Luminosidad';
+  String get colorLightness => 'Lum';
+
+  @override
+  String get dataTableColumns => 'Columnas';
+
+  @override
+  String get dataTableNext => 'Siguiente';
+
+  @override
+  String get dataTablePrevious => 'Anterior';
+
+  @override
+  String dataTableSelectedRows(int count, int total) {
+    return '$count de $total fila(s) seleccionada(s).';
+  }
 }

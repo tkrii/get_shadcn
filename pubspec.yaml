@@ -11,7 +11,7 @@ dependencies:
   flutter:
     sdk: flutter
   get: ^4.6.6
-  shadcn_flutter: ^0.0.22
+  shadcn_flutter: ^0.0.24
 
 dev_dependencies:
   surf_lint_rules: ^3.1.0
