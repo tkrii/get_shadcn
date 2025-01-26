@@ -1,73 +1,49 @@
 import 'package:flutter/material.dart' as md;
 import 'package:shadcn_flutter/shadcn_flutter.dart';
 
-ColorScheme colorSchemeAdapter({
-  Color? accent,
+ColorScheme? colorSchemeAdapter({
   md.ColorScheme? materialColorScheme,
-  md.DynamicSchemeVariant schemeVariant = md.DynamicSchemeVariant.tonalSpot,
-  md.Brightness brightness = md.Brightness.light,
   Color chart1 = const Color(0xff3689e6),
   Color chart2 = const Color(0xff68b723),
   Color chart3 = const Color(0xfff9c440),
   Color chart4 = const Color(0xfff37329),
   Color chart5 = const Color(0xffde3e80),
 }) {
-  assert(
-    (accent == null && materialColorScheme != null) ||
-        (accent != null && materialColorScheme == null) ||
-        (accent == null && materialColorScheme == null),
-  );
-
-  if (materialColorScheme == null && accent == null) {
-    return ColorSchemes.neutral(
-      ThemeMode.values.byName(brightness.name),
-    );
+  if (materialColorScheme == null) {
+    return null;
   }
-  final scheme = materialColorScheme ??
-      md.ColorScheme.fromSeed(
-        seedColor: accent!,
-        dynamicSchemeVariant: schemeVariant,
-        brightness: brightness,
-      );
 
   return ColorScheme(
-    brightness: scheme.brightness,
-    background: scheme.surface,
-    foreground: scheme.onSurface,
-    card: scheme.surfaceContainerLow,
-    cardForeground: scheme.onSurface,
-    popover: scheme.surfaceContainerHigh,
-    popoverForeground: scheme.onSurface,
-    primary: scheme.primary,
+    brightness: materialColorScheme.brightness,
+    background: materialColorScheme.surface,
+    foreground: materialColorScheme.onSurface,
+    card: materialColorScheme.surfaceContainerLow,
+    cardForeground: materialColorScheme.onSurface,
+    popover: materialColorScheme.surfaceContainerHigh,
+    popoverForeground: materialColorScheme.onSurface,
+    primary: materialColorScheme.primary,
     primaryForeground: Color.lerp(
-      scheme.onPrimary,
-      scheme.primaryContainer,
-      0.5,
+      materialColorScheme.surfaceContainer,
+      materialColorScheme.onPrimary,
+      0.25,
     )!,
-    secondary: scheme.primaryContainer,
-    secondaryForeground: scheme.onPrimaryContainer,
-    muted: scheme.surfaceContainerHighest,
-    mutedForeground: scheme.outline,
-    accent: Color.lerp(
-        Color.lerp(
-          scheme.surfaceContainerHigh,
-          scheme.primaryContainer,
-          0.5,
-        ),
-        scheme.surfaceContainerLowest,
-        0.5)!,
+    secondary: materialColorScheme.secondaryContainer,
+    secondaryForeground: materialColorScheme.onSecondaryContainer,
+    muted: materialColorScheme.surfaceContainerHighest,
+    mutedForeground: materialColorScheme.onSurfaceVariant,
+    accent: materialColorScheme.tertiaryContainer,
     accentForeground: Color.lerp(
-      scheme.onSurfaceVariant,
-      scheme.onPrimaryContainer,
+      materialColorScheme.onSurfaceVariant,
+      materialColorScheme.onTertiaryContainer,
       0.75,
     )!,
-    destructive: scheme.error,
-    destructiveForeground: scheme.onError,
-    border: scheme.outlineVariant,
-    input: scheme.surfaceContainerHigh,
+    destructive: materialColorScheme.error,
+    destructiveForeground: materialColorScheme.onError,
+    border: materialColorScheme.outlineVariant,
+    input: materialColorScheme.surfaceContainerHigh,
     ring: Color.lerp(
-      scheme.primary,
-      scheme.inversePrimary,
+      materialColorScheme.primary,
+      materialColorScheme.inversePrimary,
       0.5,
     )!,
     chart1: chart1,
@@ -90,7 +66,7 @@ ThemeData themeAdapter({
     ThemeData(
       colorScheme: colorSchemeAdapter(
         materialColorScheme: materialTheme?.colorScheme,
-      ),
+      )!,
       platform: materialTheme?.platform,
       radius: radius,
       scaling: scaling,

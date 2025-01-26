@@ -60,12 +60,26 @@ class SettingsView extends StatelessWidget {
                   .h4()
                   .withPadding(vertical: Theme.of(context).radius),
               SurfaceCard(
-                child: Switch(
-                  leading:
-                      Text(LocaleKeys.settings_use_master_detail.tr).expanded(),
-                  value: controller.masterDetail.value,
-                  onChanged: controller.masterDetail,
-                ).center(),
+                child: Column(
+                  children: [
+                    Switch(
+                      leading: Text(LocaleKeys.settings_use_master_detail.tr)
+                          .expanded(),
+                      value: controller.masterDetail.value,
+                      onChanged: controller.masterDetail,
+                    ),
+                    Switch(
+                      leading:
+                          Text(LocaleKeys.settings_high_contrast.tr).expanded(),
+                      value: controller.contrast.value,
+                      onChanged: controller.contrast,
+                    ),
+                  ],
+                  mainAxisSize: MainAxisSize.min,
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                ).gap(
+                  Theme.of(context).radiusMd,
+                ),
               ),
             ],
           ).withPadding(horizontal: Theme.of(context).radiusLg);

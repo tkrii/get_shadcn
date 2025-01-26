@@ -19,7 +19,8 @@
         },
         "color_accent": "Color de acento",
         "options": "Opciones",
-        "use_master_detail": "Usar diseño maestro-detalle"
+        "use_master_detail": "Usar diseño maestro-detalle",
+        "high_contrast": "Alto contraste"
     },
     "simple_widget_gallery": "Galería de widgets simple",
     "new_tab": "Nueva pestaña",

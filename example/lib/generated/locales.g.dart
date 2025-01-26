@@ -4,8 +4,8 @@
 // ignore: avoid_classes_with_only_static_members
 class AppTranslation {
   static Map<String, Map<String, String>> translations = {
-    'en_us': Locales.en_us,
     'es_mx': Locales.es_mx,
+    'en_us': Locales.en_us,
   };
 }
 
@@ -27,6 +27,7 @@ class LocaleKeys {
   static const settings_color_accent = 'settings_color_accent';
   static const settings_options = 'settings_options';
   static const settings_use_master_detail = 'settings_use_master_detail';
+  static const settings_high_contrast = 'settings_high_contrast';
   static const simple_widget_gallery = 'simple_widget_gallery';
   static const new_tab = 'new_tab';
   static const add_tab = 'add_tab';
@@ -62,56 +63,6 @@ class LocaleKeys {
 }
 
 class Locales {
-  static const en_us = {
-    'greating_title': 'Hello World',
-    'greating_press': 'Press',
-    'greating_pressed': 'You have pressed the button %s times',
-    'widgets': 'Widgets',
-    'typography': 'Typography',
-    'tabs': 'Tabs',
-    'new_badge': 'New',
-    'about': 'About',
-    'settings_title': 'Settings',
-    'settings_theme_title': 'Theme',
-    'settings_theme_light': 'Light',
-    'settings_theme_dark': 'Dark',
-    'settings_theme_system': 'System',
-    'settings_color_accent': 'Accent color',
-    'settings_options': 'Options',
-    'settings_use_master_detail': 'Use master-detail layout',
-    'simple_widget_gallery': 'Simple widget gallery',
-    'new_tab': 'New tab',
-    'add_tab': 'Add tab',
-    'lorem': 'Lorem ipsum dolor',
-    'pickers': 'Pickers',
-    'alert_and_toast': 'Alert and toast',
-    'text_field': 'Text field',
-    'indicator': 'Indicator',
-    'slider': 'Slider',
-    'list_tile': 'List tile',
-    'switch_widget': 'Switch',
-    'radio_widget': 'Radio',
-    'checkbox_widget': 'Checkbox',
-    'segmented_control': 'Segmented control',
-    'linked_buttons': 'Linked buttons',
-    'buttons': 'Buttons',
-    'date_picker': 'Date picker',
-    'time_picker': 'Time picker',
-    'color_picker': 'Color picker',
-    'show_dialog': 'Show dialog',
-    'show_drawer': 'Show drawer',
-    'show_sheet': 'Show sheet',
-    'show_toast': 'Show toast',
-    'title': 'Title %s',
-    'subtitle': 'Subtitle',
-    'switch_title': 'Switch %s',
-    'radio_title': 'Radio %s',
-    'checkbox_title': 'Checkbox %s',
-    'first_item': 'First item',
-    'second_item': 'Second item',
-    'third_item': 'Third item',
-    'add': 'Add',
-  };
   static const es_mx = {
     'greating_title': 'Hola Mundo',
     'greating_press': 'Presionar',
@@ -129,6 +80,7 @@ class Locales {
     'settings_color_accent': 'Color de acento',
     'settings_options': 'Opciones',
     'settings_use_master_detail': 'Usar diseño maestro-detalle',
+    'settings_high_contrast': 'Alto contraste',
     'simple_widget_gallery': 'Galería de widgets simple',
     'new_tab': 'Nueva pestaña',
     'add_tab': 'Agregar pestaña',
@@ -161,5 +113,56 @@ class Locales {
     'second_item': 'Segundo elemento',
     'third_item': 'Tercer elemento',
     'add': 'Agregar',
+  };
+  static const en_us = {
+    'greating_title': 'Hello World',
+    'greating_press': 'Press',
+    'greating_pressed': 'You have pressed the button %s times',
+    'widgets': 'Widgets',
+    'typography': 'Typography',
+    'tabs': 'Tabs',
+    'new_badge': 'New',
+    'about': 'About',
+    'settings_title': 'Settings',
+    'settings_theme_title': 'Theme',
+    'settings_theme_light': 'Light',
+    'settings_theme_dark': 'Dark',
+    'settings_theme_system': 'System',
+    'settings_color_accent': 'Accent color',
+    'settings_options': 'Options',
+    'settings_use_master_detail': 'Use master-detail layout',
+    'settings_high_contrast': 'High contrast',
+    'simple_widget_gallery': 'Simple widget gallery',
+    'new_tab': 'New tab',
+    'add_tab': 'Add tab',
+    'lorem': 'Lorem ipsum dolor',
+    'pickers': 'Pickers',
+    'alert_and_toast': 'Alert and toast',
+    'text_field': 'Text field',
+    'indicator': 'Indicator',
+    'slider': 'Slider',
+    'list_tile': 'List tile',
+    'switch_widget': 'Switch',
+    'radio_widget': 'Radio',
+    'checkbox_widget': 'Checkbox',
+    'segmented_control': 'Segmented control',
+    'linked_buttons': 'Linked buttons',
+    'buttons': 'Buttons',
+    'date_picker': 'Date picker',
+    'time_picker': 'Time picker',
+    'color_picker': 'Color picker',
+    'show_dialog': 'Show dialog',
+    'show_drawer': 'Show drawer',
+    'show_sheet': 'Show sheet',
+    'show_toast': 'Show toast',
+    'title': 'Title %s',
+    'subtitle': 'Subtitle',
+    'switch_title': 'Switch %s',
+    'radio_title': 'Radio %s',
+    'checkbox_title': 'Checkbox %s',
+    'first_item': 'First item',
+    'second_item': 'Second item',
+    'third_item': 'Third item',
+    'add': 'Add',
   };
 }
