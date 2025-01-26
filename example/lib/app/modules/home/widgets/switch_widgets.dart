@@ -10,11 +10,6 @@ class SwitchWidgets extends StatelessWidget {
   @override
   Widget build(BuildContext context) => GetBuilder<HomeController>(
         builder: (controller) {
-          const values = [
-            LocaleKeys.first_item,
-            LocaleKeys.second_item,
-          ];
-
           return Collapsible(
             children: [
               CollapsibleTrigger(
