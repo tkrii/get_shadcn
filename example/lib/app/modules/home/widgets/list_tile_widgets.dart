@@ -21,7 +21,7 @@ class ListTileWidgets extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
                     Basic(
-                      title: Text(
+                      content: Text(
                         LocaleKeys.radio_title.trArgs(
                           ['1'],
                         ),
@@ -31,7 +31,7 @@ class ListTileWidgets extends StatelessWidget {
                       ),
                     ),
                     Basic(
-                      title: Text(
+                      content: Text(
                         LocaleKeys.radio_title.trArgs(
                           ['2'],
                         ),

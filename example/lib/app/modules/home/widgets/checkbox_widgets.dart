@@ -23,7 +23,7 @@ class CheckboxWidgets extends StatelessWidget {
                     Checkbox(
                       state: CheckboxState.checked,
                       trailing: Basic(
-                        title: Text(
+                        content: Text(
                           LocaleKeys.checkbox_title.trArgs(
                             ['1'],
                           ),
@@ -34,7 +34,7 @@ class CheckboxWidgets extends StatelessWidget {
                     Checkbox(
                       state: CheckboxState.indeterminate,
                       trailing: Basic(
-                        title: Text(
+                        content: Text(
                           LocaleKeys.checkbox_title.trArgs(
                             ['2'],
                           ),
@@ -46,7 +46,7 @@ class CheckboxWidgets extends StatelessWidget {
                     Checkbox(
                       state: CheckboxState.unchecked,
                       trailing: Basic(
-                        title: Text(
+                        content: Text(
                           LocaleKeys.checkbox_title.trArgs(
                             ['3'],
                           ),

@@ -25,7 +25,7 @@ class RadioWidgets extends StatelessWidget {
                       RadioItem(
                         value: 0,
                         leading: Basic(
-                          title: Text(
+                          content: Text(
                             LocaleKeys.radio_title.trArgs(['1']),
                           ),
                         ).expanded(),
@@ -33,7 +33,7 @@ class RadioWidgets extends StatelessWidget {
                       RadioItem(
                         value: 1,
                         leading: Basic(
-                          title: Text(
+                          content: Text(
                             LocaleKeys.radio_title.trArgs(['2']),
                           ),
                           subtitle: Text(LocaleKeys.subtitle.tr),

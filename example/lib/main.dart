@@ -1,6 +1,7 @@
 import 'package:example/app/modules/home/controllers/home_controller.dart';
 import 'package:example/app/routes/app_pages.dart';
 import 'package:example/generated/locales.g.dart';
+import 'package:flutter/material.dart' as md;
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:get/get_state_manager/src/simple/get_state.dart';
 import 'package:get_shadcn/get_shadcn.dart';
@@ -23,22 +24,33 @@ void main() {
           Locale('es'),
         ],
         themeMode: ThemeMode.values[controller.themeMode.value],
-        theme: ThemeData(
-          colorScheme: AdwaitaScheme(
-            primaryColor: controller.accent.value.accent,
-          ).light(
-            highContrast: controller.contrast.value,
+        theme: themeAdapter(
+          materialTheme: md.ThemeData(
+            colorSchemeSeed: controller.accent.value.accent,
           ),
-          radius: 0.75,
         ),
-        darkTheme: ThemeData(
-          colorScheme: AdwaitaScheme(
-            primaryColor: controller.accent.value.accent,
-          ).dark(
-            highContrast: controller.contrast.value,
+        // theme: ThemeData(
+        //   colorScheme: AdwaitaScheme(
+        //     primaryColor: controller.accent.value.accent,
+        //   ).light(
+        //     highContrast: controller.contrast.value,
+        //   ),
+        //   radius: 0.75,
+        // ),
+        darkTheme: themeAdapter(
+          materialTheme: md.ThemeData(
+            colorSchemeSeed: controller.accent.value.accent,
+            brightness: md.Brightness.dark,
           ),
-          radius: 0.75,
         ),
+        // darkTheme: ThemeData(
+        //   colorScheme: AdwaitaScheme(
+        //     primaryColor: controller.accent.value.accent,
+        //   ).dark(
+        //     highContrast: controller.contrast.value,
+        //   ),
+        //   radius: 0.75,
+        // ),
         translationsKeys: AppTranslation.translations,
         title: 'GetShadcn Example',
         initialRoute: AppPages.INITIAL,
