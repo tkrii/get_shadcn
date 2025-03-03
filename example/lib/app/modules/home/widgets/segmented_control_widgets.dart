@@ -26,7 +26,13 @@ class SegmentedControlWidgets extends StatelessWidget {
                 child: Tabs(
                   index: values.indexOf(controller.selected.value),
                   onChanged: (index) => controller.selected(values[index]),
-                  tabs: values.map((v) => Text(v.tr)).toList(),
+                  children: values
+                      .map(
+                        (v) => TabChildWidget(
+                          child: Text(v.tr),
+                        ),
+                      )
+                      .toList(),
                 ).center(),
               ),
             ],

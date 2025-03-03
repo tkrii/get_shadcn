@@ -7,7 +7,7 @@ class HomeController extends GetxController {
   static HomeController get to => Get.find();
   final masterDetail = RxBool(false);
   final pushedButtonTimes = RxInt(0);
-  final navigation = RxInt(0);
+  final navigation = RxInt(1);
   final accent = Rx<ElementaryColor>(ElementaryColor.main);
   final themeMode = RxInt(0);
   final selected = RxString(LocaleKeys.first_item);

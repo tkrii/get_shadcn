@@ -247,7 +247,7 @@ class GetShadcnApp extends StatelessWidget {
                 theme: _.theme == null
                     ? theme ??
                         themeAdapter(
-                          materialTheme: md.ThemeData.fallback(),
+                          materialTheme: md.ThemeData.light(),
                         )
                     : themeAdapter(
                         materialTheme: _.theme,
@@ -256,7 +256,7 @@ class GetShadcnApp extends StatelessWidget {
                     ? darkTheme ??
                         theme ??
                         themeAdapter(
-                          materialTheme: md.ThemeData.fallback(),
+                          materialTheme: md.ThemeData.dark(),
                         )
                     : themeAdapter(
                         materialTheme: _.darkTheme,
@@ -306,7 +306,7 @@ class GetShadcnApp extends StatelessWidget {
                 theme: _.theme == null
                     ? theme ??
                         themeAdapter(
-                          materialTheme: md.ThemeData.fallback(),
+                          materialTheme: md.ThemeData.light(),
                         )
                     : themeAdapter(
                         materialTheme: _.theme,
@@ -315,7 +315,7 @@ class GetShadcnApp extends StatelessWidget {
                     ? darkTheme ??
                         theme ??
                         themeAdapter(
-                          materialTheme: md.ThemeData.fallback(),
+                          materialTheme: md.ThemeData.dark(),
                         )
                     : themeAdapter(
                         materialTheme: _.darkTheme,
@@ -334,7 +334,7 @@ class GetShadcnApp extends StatelessWidget {
                 shortcuts: shortcuts,
                 scrollBehavior: scrollBehavior,
                 // useInheritedMediaQuery: useInheritedMediaQuery,
-                //   actions: actions,
+                actions: actions,
               ),
       );
 
@@ -345,8 +345,8 @@ class GetShadcnApp extends StatelessWidget {
               ? TextDirection.rtl
               : TextDirection.ltr),
       child: builder == null
-          ? (child ?? const md.Material())
-          : builder!(context, child ?? const md.Material()),
+          ? (child ?? const Basic())
+          : builder!(context, child ?? const Basic()),
     );
   }
 
